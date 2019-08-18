@@ -274,6 +274,10 @@ for j = 1:testSpectraCount
    if plotType == 1
       figure('Name',sprintf('Quotient distribution for test spectrum %d',j));
       histogram(quotients(j,:));
+      xlabel('Quotient');
+      ylabel('Frequency');
+      set(gca,'FontName','Gadugi','FontWeight','bold');
+      set(gcf,'Color','White');
    end
    normSpectrum(j,:) = testSpectra(j,:)./(1/medianQuotient(j));
 end
